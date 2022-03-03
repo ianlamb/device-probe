@@ -1,50 +1,48 @@
 {
-  "name": "device-probe",
-  "version": "0.1.0",
-  "author": "Ian Lamb",
-  "private": true,
-  "dependencies": {
-    "bytes": "^3.1.0",
-    "classnames": "^2.2.6",
-    "lodash": "^4.17.11",
-    "prettier": "^1.16.4",
-    "react": "^16.8.6",
-    "react-dom": "^16.8.6",
-    "react-easy-state": "^6.1.1",
-    "react-error-boundary": "^1.2.5",
-    "react-scripts": "2.1.8"
-  },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "build:docker": "docker build -t device-probe .",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "deploy": "git push dokku master",
-    "format": "prettier --single-quote --no-semi --write ./src/**/*.js"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
+    "name": "device-probe",
+    "version": "0.1.0",
+    "author": "Ian Lamb",
+    "private": true,
+    "dependencies": {
+        "bytes": "^3.1.0",
+        "classnames": "^2.2.6",
+        "lodash": "^4.17.11",
+        "prettier": "^1.16.4",
+        "react": "^16.8.6",
+        "react-dom": "^16.8.6",
+        "react-easy-state": "^6.1.1",
+        "react-error-boundary": "^1.2.5",
+        "react-scripts": "2.1.8"
+    },
+    "scripts": {
+        "start": "react-scripts start",
+        "build": "react-scripts build",
+        "build:docker": "docker build -t device-probe .",
+        "test": "react-scripts test",
+        "eject": "react-scripts eject",
+        "deploy": "./deploy.sh",
+        "deploy:dokku": "git push dokku master",
+        "format": "prettier --single-quote --no-semi --write ./src/**/*.js",
+        "publish": "npm run deploy",
+        "prepublish": "npm run build"
+    },
+    "lint-staged": {
+        "src/**/*.{js,json,css,md}": [
+            "prettier --single-quote --no-semi --write",
+            "git add"
+        ]
+    },
+    "eslintConfig": {
+        "extends": "react-app"
+    },
+    "browserslist": [
+        ">0.2%",
+        "not dead",
+        "not ie <= 11",
+        "not op_mini all"
+    ],
+    "devDependencies": {
+        "husky": "^1.3.1",
+        "lint-staged": "^8.1.5"
     }
-  },
-  "lint-staged": {
-    "src/**/*.{js,json,css,md}": [
-      "prettier --single-quote --no-semi --write",
-      "git add"
-    ]
-  },
-  "eslintConfig": {
-    "extends": "react-app"
-  },
-  "browserslist": [
-    ">0.2%",
-    "not dead",
-    "not ie <= 11",
-    "not op_mini all"
-  ],
-  "devDependencies": {
-    "husky": "^1.3.1",
-    "lint-staged": "^8.1.5"
-  }
 }
