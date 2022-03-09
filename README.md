@@ -1,6 +1,6 @@
 # Device Probe
 
-This app gathers and displays any useful information it can find about your device, browser, network connection, etc.
+Device Probe is a tiny SPA that displays details about your device, browser, network connection, etc.
 
 Icons by [Budi Tanrim](http://svgicons.sparkk.fr/)
 
