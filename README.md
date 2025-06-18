@@ -1,5 +1,7 @@
 # Device Probe
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/9babf27c-11aa-4b2f-b8ca-2bab67ba6f37/deploy-status)](https://app.netlify.com/projects/device-probe/deploys)
+
 Device Probe is a tiny SPA that displays details about your device, browser, network connection, etc.
 
 Icons by [Budi Tanrim](http://svgicons.sparkk.fr/)
@@ -41,6 +43,4 @@ Instead, it will copy all the configuration files and the transitive dependencie
 
 You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-### 'npm run deploy'
 
-Copies build files directly to ianlamb.com VPS
